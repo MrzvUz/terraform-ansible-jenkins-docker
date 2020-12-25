@@ -1,17 +1,17 @@
 provider "aws" {
-    region="us-east-1"
+  region = "us-east-1"
 }
 
 variable "name" {
-    description="Name of the web box at apply"
+  description = "Name of the web box at apply"
 }
 
-resource "aws_instance" "do_web_01" {
-    ami = "ami-04b9e92b5572fa0d1"
-    instance_type = "t2.micro"
-    key_name = "devops_01"
+resource "aws_instance" "DevOps-Jenkins-Web" {
+  ami           = "ami-0885b1f6bd170450c"
+  instance_type = "t2.micro"
+  key_name      = "devops"
 
-    tags = {
-        Name = "${var.name}"
-    }
+  tags = {
+    Name = "aws_instance.DevOps-Jenkins-Web"
+  }
 }

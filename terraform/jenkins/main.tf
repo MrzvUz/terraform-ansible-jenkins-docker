@@ -1,17 +1,17 @@
 provider "aws" {
-    region = "us-east-1"
+  region = "us-east-1"
 }
 
 variable "name" {
-    description = "Name the instance on deploy"
+  description = "Name the instance on deploy"
 }
 
-resource "aws_instance" "devops_01" {
-    ami = "ami-04b9e92b5572fa0d1"
-    instance_type = "t2.micro"
-    key_name = "devops_01"
+resource "aws_instance" "DevOps-Jenkins" {
+  ami           = "ami-0885b1f6bd170450c"
+  instance_type = "t2.micro"
+  key_name      = "devops"
 
-    tags = {
-        Name = "${var.name}"
-    }
+  tags = {
+    Name = "aws_instance.DevOps-Jenkins"
+  }
 }
