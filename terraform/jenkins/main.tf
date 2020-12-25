@@ -12,6 +12,6 @@ resource "aws_instance" "DevOps-Jenkins" {
   key_name      = "devops"
 
   tags = {
-    Name = "aws_instance.DevOps-Jenkins"
+    Name = "DevOps-Jenkins"
   }
 }
